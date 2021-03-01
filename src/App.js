@@ -1,11 +1,12 @@
-import './App.css';
+import './Normalize.css';
 import React from 'react'
-import Slider from './components/Slider.js'
+import Navbar from './components/Navbar'
 
 function App() {
   return (
     <div className="App">
-      <Slider />
+      <Navbar />
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod laborum quas ea dolores, quo earum atque consequuntur fugit accusamus et neque. Aperiam totam eveniet exercitationem obcaecati est. Est, voluptatibus fugiat.
     </div>
   );
 }

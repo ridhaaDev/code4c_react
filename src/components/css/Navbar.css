@@ -1,61 +1,118 @@
 #main-container {
-    height: 60px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+  height: 60px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 div#hamburger {
-    margin: 0 auto;
-    padding: 5px;
+  margin: 0 auto;
+  padding: 5px;
 }
 
 #main-container img {
-    height: 40px;
-    padding: 10px 10px 10px 30px;
+  height: 40px;
+  padding: 10px 10px 10px 30px;
 }
 
 ul {
-    grid-column: 1/3;
-    padding: 0;
-    margin: 0;
-    background-color: white;
-    z-index: 100;
+  display: none;
+  grid-column: 1/3;
+  padding: 0;
+  margin: 0;
+  background-color: white;
+  z-index: 100;
 }
 
 ul li {
-    list-style-type: none;
-    padding: 30px;
-    text-align: center;
-
+  list-style-type: none;
+  padding: 30px;
+  text-align: center;
 }
 
 ul li a {
-    color: black;
-    padding: 30px;
-    text-decoration: none;
+  color: black;
+  padding: 30px;
+  text-decoration: none;
+}
+
+.search {
+  display: none;
+  grid-column: 1/3;
+  height: 30px;
+  /* margin: 0 auto; */
+
+  margin: 0 20%;
 }
 
 /* Tablet styles */
 @media only screen and (min-width: 768px) {
-    #main-container {
-        height: 60px;
-        display: block;
-    }
-
-    div#hamburger {
-        display: none;
-        grid-row: 2/2;
-    }
-
-    ul {
-        display: inline;
-    }
-
-    ul li {
-        display: inline;
-        grid-column: 2/2;
-      
-        padding: 4px;
-    }
-    
+  #main-container {
+    height: 80px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
   }
+
+  div#hamburger {
+    display: none;
+    /* grid-row: 2/2; */
+  }
+
+  ul {
+
+    display: block;
+    grid-row: 1/2;
+    grid-column: 2/3;
+  }
+
+  ul li {
+    display: inline;
+    padding: 1px;
+    line-height: 60px;
+  }
+
+  ul li a {
+    color: #e38f84;
+    font-size: 15px;
+  }
+
+  .search {
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    grid-row: 2/2;
+    grid-column: 1/3;
+  }
+}
+
+/* Desktop styles */
+@media only screen and (min-width: 1200px) {
+  #main-container {
+    height: 60px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 2fr;
+  }
+
+  ul {
+    grid-row: 1/2;
+    grid-column: 2/2;
+  }
+
+  .search {
+    margin: 0 auto;
+    grid-row: 1/2;
+    grid-column: 3/3;
+  }
+
+  .search input,
+  .search button {
+    margin-top: 10px;
+    height: 40px;
+    /* padding: 0; */
+  }
+
+  /* Balancing the button and the text */
+  .search button {
+    height: 46px;
+  }
+}

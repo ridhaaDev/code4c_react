@@ -1,49 +1,12 @@
 import React, { useState } from "react";
 import "./css/Navbar.css";
+import Search from "./Search";
 import Hamburger from "hamburger-react";
-import useWindowDimensions from './hooks/useWindowDimensions'
 
 const Navbar = () => {
-  const [showNav, setShowNav] = useState(false);
-  const {height, width} = useWindowDimensions();
+  const [showNav, setShowNav] = useState("inline");
 
-  const handleClick = (e) => {
-    if (showNav) {
-      setShowNav(false);
-    } else {
-      setShowNav(true);
-    }
-  };
-
-
-
-
-  const showList = () => {
-  
-    if (showNav || width >= 768) {
-
-        console.log("happened");
-      return (
-        <ul>
-          <li>
-            <a href="https://www.c-sharpcorner.com/UploadFile/736bf5/bootstrap-navigation-bar-with-toggle-button/</li>">Home</a>
-          </li>
-          <li>
-            <a href="https://www.c-sharpcorner.com/UploadFile/736bf5/bootstrap-navigation-bar-with-toggle-button/</li>">About</a>
-          </li>
-          <li>
-            <a href="https://www.c-sharpcorner.com/UploadFile/736bf5/bootstrap-navigation-bar-with-toggle-button/</li>">Courses</a>
-          </li>
-          <li>
-            <a href="https://www.c-sharpcorner.com/UploadFile/736bf5/bootstrap-navigation-bar-with-toggle-button/</li>">Portfolio</a>
-          </li>
-          <li>
-            <a href="https://www.c-sharpcorner.com/UploadFile/736bf5/bootstrap-navigation-bar-with-toggle-button/</li>">Contact</a>
-          </li>
-        </ul>
-      );
-    }
-  };
+  const handleClick = (e) => {};
 
   return (
     <nav id="main-container">
@@ -53,10 +16,26 @@ const Navbar = () => {
         <Hamburger />
       </div>
 
-      {showList()}
+      <ul style={{ display: showNav }}>
+        <li>
+          <a href="">Home</a>
+        </li>
+        <li>
+          <a href="">About</a>
+        </li>
+        <li>
+          <a href="">Courses</a>
+        </li>
+        <li>
+          <a href="">Portfolio</a>
+        </li>
+        <li>
+          <a href="">Contact</a>
+        </li>
+      </ul>
+
+      <Search showNav={showNav} />
     </nav>
-
-
   );
 };
 

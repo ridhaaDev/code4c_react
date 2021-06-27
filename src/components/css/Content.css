@@ -1,0 +1,53 @@
+/* Content section */
+
+
+.underline-box-outer {
+    width: 200px;
+    height: 7px;
+    background-color:#ccc;
+}
+
+.underline-box-inner {
+    height: inherit;
+    width: 50px;
+    background-color: red;
+}
+
+.who-we-are {
+    padding: 10px;
+}
+
+/* Image grid */
+.image-grid {
+    padding: 10px;
+    
+}
+
+.image-grid > img {
+    width: 100%;
+}
+
+.second-grid > img {
+    width: 100%;
+}
+
+/* Skills section */
+.skills {
+    background-color: black;
+    color: white;
+    padding: 100px 10px;
+}
+
+.skills > section > img {
+    width: 100px;
+}
+
+/* Portfolio section */
+.portfolio {
+    padding: 10px;
+}
+
+/* Meet the team */
+.meet-the-team {
+    
+}

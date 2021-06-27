@@ -1,0 +1,16 @@
+.img-grid {
+    display: flex;
+    flex-direction: column;
+}
+
+.img-grid > .box {
+    width: 100%;
+    height: 80vh;
+    transition: background-image 0.2s ease-in-out;
+}
+/* 
+.box {
+    width: 100%;
+    height: 500px;
+    background-color: red;
+} */

@@ -3,12 +3,10 @@ import {FaSearch} from "react-icons/fa"
 
 const Search = ({ showNav }) => {
   return (
-    <div className="search" style={{ display: showNav }}>
+    <div className="search">
       <input placeholder="search..." />
      
-      <button> <FaSearch /></button>
-
-      {/* <i class="fas fa-search"></i> */}
+      <FaSearch className="search-icon" />
     </div>
   );
 };
